@@ -1,0 +1,39 @@
+.screen-scroll{
+  &::-webkit-scrollbar { width: 0; }
+  &{ -ms-overflow-style: none; }
+  &{ overflow: -moz-scrollbars-none; }
+  overflow: hidden;
+}
+
+.screen-transition{
+  -webkit-transition: -webkit-transform .8s ease-in;
+  transition: -webkit-transform .8s ease-in;
+  transition: transform .8s ease-in;
+}
+
+.fixed-transition{
+  transition: top 0.8s ease-in;
+}
+.fixedHeader{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.fixedFooter{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+}
+
+section.screen > section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: nowrap;
+}

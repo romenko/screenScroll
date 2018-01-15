@@ -1,0 +1,28 @@
+{
+  "name": "romenko.screenscroll",
+  "version" : "1.0.0",
+  "authors": [
+    "Roman Yeromenko"
+  ],
+  "description": "One screen scroll Jquery plugin, that lets you create a one page scroll website",
+  "main": "dist/screenScroll.min.js",
+  "keywords": [
+    "one",
+    "page",
+    "screen",
+    "scroll"
+  ],
+  "license": "MIT",
+  "homepage": "http://romenko.com.ua/",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-mousewheel": "^3.1.13"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

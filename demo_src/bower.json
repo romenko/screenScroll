@@ -1,0 +1,22 @@
+{
+  "name": "screenScroll.demo",
+  "authors": [
+    "Roman Yeromenko"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-mousewheel": "^3.1.13",
+    "font-awesome": "^4.7.0"
+  }
+}

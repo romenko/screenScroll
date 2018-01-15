@@ -1,0 +1,255 @@
+- var production = 0;
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        title screenScroll Demo
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        //link(href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext", rel="stylesheet")
+        if production
+            link(rel="stylesheet", href="css/hightlight.css")
+            link(rel="stylesheet", href="css/font-awesome.min.css")
+            link(rel="stylesheet", href="css/screenScroll.css")
+            link(rel="stylesheet", href="css/style.css")
+        else
+            link(rel="stylesheet", href="css/hightlight.css")
+            link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.min.css")
+            link(rel="stylesheet", href="css/screenScroll.css")
+            link(rel="stylesheet", href="css/style.css")
+    body
+        header.header
+            .container
+                .logo
+                    .text28
+                        i.fa.fa-bars(data-event="menu") &nbsp;
+                        span(data-event="menu")  screenScroll
+                .menu.navigation
+                    nav
+                        li
+                            a(data-screenscroll-movetosection="about") About
+                        li
+                            a(data-screenscroll-movetosection="features") Features
+                        li
+                            a(data-screenscroll-movetosection="how-to-install") How to install
+                        li
+                            a(data-screenscroll-movetosection="how-to-use") How to use
+                        li
+                            a(data-screenscroll-movetosection="options") Options
+                        li
+                            a(data-screenscroll-movetosection="events") Events
+        main.main
+            section.section__about#about
+                .block
+                    .block__body
+                        .container
+                            .about
+                                .icon
+                                    i(class="fa fa-television")
+                                .text
+                                    .text20 One screen scroll Jquery plugin, that lets you create a one page scroll website. The plugin allows you to create beautiful screens for the entire window from one or several sections. You can set the number of sections on the screen, fix the header or footer depending on the width of the window.
+                    .block__footer
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 Features
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section.section-features#features
+                .block
+                    .block__body
+
+                            .block__title
+                                .title-line
+                                    .line-left
+                                    h2 Features
+                                    .line-right
+                            .features-list
+                                .feature-item
+                                    .feature-item__icon
+                                        i.fa.fa-mobile
+                                    .feature-item__text Responsive
+                                .feature-item
+                                    .feature-item__icon
+                                        i.fa.fa-hand-pointer-o
+                                    .feature-item__text Touchable
+                                .feature-item
+                                    .feature-item__icon
+                                        i.fa.fa-cubes
+                                    .feature-item__text Constructor
+                    .block__footer
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 How to install
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section.how-to-install#how-to-install
+                .block
+                    .block__header
+                        .block-previous
+                            .block-previous__content
+                                i.triangle(class="fa fa-arrow-up")
+                            .block-previous__wrap
+                                a.block-previous__link(data-screenscroll="prev")
+                                .block-previous__text.text18 Features
+
+
+                    .block__body
+                        .block__title
+                            h2 How to install
+                        .container
+                            .text18
+                                p This package can be installed with:
+                                ul
+                                    li <strong>npm:</strong> npm install --save romenko.screenscrooll
+                                    li <strong>bower:</strong> bower install --save romenko.screenscrooll
+                                    li
+                                        a(href="#") download from GitHub
+                    .block__footer
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 How to use
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section#how-to-use
+                .block
+                    .block__body
+                        .block__title
+                            h2 How to use
+                        .container
+                            .code-example
+                                p Put the required stylesheet at the top of your markup:
+                                pre
+                                    code(class="html")
+                                        p &lt;link rel=&quot;stylesheet&quot; href=&quot;/bower_components/screenScroll/dist/screenscroll.min.css&quot; /&gt;
+                                        p &lt;link rel=&quot;stylesheet&quot; href=&quot;/node_modules/screenScroll/dist/screenscroll.min.css&quot; /&gt;
+                                p Put the script at the bottom of your markup right after jQuery:
+                                pre
+                                    code(class="html")
+                                        p &lt;script src=&quot;/bower_components/screenScroll/dist/screenscroll.min.js&quot;&gt;&lt;/script&gt;
+                                        p &lt;script src=&quot;/node_modules/screenScroll/dist/screenscroll.min.js&quot;&gt;&lt;/script&gt;
+                    .block__foter
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 Next
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section
+                .block
+                    .block__body
+                        .container
+                            .code-example
+                                p Document structure
+                                pre
+                                    code(class="html")
+                                        | &lt;header.header&gt;...&lt;/header&gt;
+                                        | &lt;main.main&gt;...&lt;/main&gt;
+                                        | &lt;footer.footer&gt;...&lt;/footer&gt;
+                                p Call the plugin function
+                                pre
+                                    code(class="javascript")
+                                        | $(document).ready(function(){
+                                        |   $('main.main').screenScroll({
+                                        |      header: $('header.header'),
+                                        |      footer: $('footer.footer')
+                                        |   });
+                                        | });
+                    .block__footer
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 Options
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section#options
+                .block
+                    .block__body
+                        .container
+                            .block__title
+                                h2 Options
+                            .code-example
+                                table
+                                    tr
+                                        td header
+                                        td Header node
+                                    tr
+                                        td footer
+                                        td Footer node
+                                    tr
+                                        td footerFixed
+                                        td Fixed footer panel
+                                    tr
+                                        td headerFixed
+                                        td Fixed header panel
+                                    tr
+                                        td startScreen
+                                        td Start screen position
+                                    tr
+                                        td scrollTimeOut
+                                        td Delay after move screen
+                                    tr
+                                        td responsive
+                                        td Responsive options
+                    .block__foter
+                        .block-more
+                            .block-more__wrap
+                                a.block-more__link(data-screenscroll="next")
+                                .block-more__text.text18 Events
+                            .block-more__content
+                                i.triangle(class="fa fa-arrow-down")
+            section#events
+                .block
+                    .block__body
+                        .container
+                            .block__title
+                                h2 Events
+                            .code-example
+                                table
+                                    tr
+                                        td screenScroll.init
+                                        td When the plugin initializes.
+                                    tr
+                                        td screenScroll.resize
+                                        td When the plugin gets resized.
+                                    tr
+                                        td screenScroll.afterMove
+                                        td After screen move.
+                                    tr
+                                        td screenScroll.beforeMove
+                                        td Before screen move.
+                                    tr
+                                        td screenScroll.next
+                                        td Goes to next screen
+                                    tr
+                                        td screenScroll.prev
+                                        td Goes to previous screen
+                                    tr
+                                        td screenScroll.moveTo
+                                        td Move to screen by index
+                                    tr
+                                        td screenScroll.goTo
+                                        td Go to screen by index
+                                    tr
+                                        td screenScroll.moveToSection
+                                        td Move to screen where has section index
+                                    tr
+                                        td screenScroll.moveToSectionId
+                                        td Move to section where has section id
+
+        footer.footer Copyright 2018 Roman Yeromenko
+        if production
+            script(type='text/javascript', src='js/jquery.min.js')
+            script(type='text/javascript', src='js/jquery.mousewheel.min.js')
+            script(type='text/javascript', src='js/highlight.pack.js')
+            script(type='text/javascript', src='js/screenScroll.js')
+            <script>hljs.initHighlightingOnLoad();</script>
+            script(type='text/javascript', src='js/script.js')
+        else
+            script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
+            script(type='text/javascript', src='bower_components/jquery-mousewheel/jquery.mousewheel.min.js')
+            script(type='text/javascript', src='js/highlight.pack.js')
+            script(type='text/javascript', src='js/screenScroll.js')
+            <script>hljs.initHighlightingOnLoad();</script>
+            script(type='text/javascript', src='js/script.js')

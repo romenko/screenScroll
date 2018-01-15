@@ -1,0 +1,9 @@
+# Jetbrains
+*.idea
+
+# Node
+node_modules
+demo_src/node_modules
+
+# Bower
+bower_components
