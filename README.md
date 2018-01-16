@@ -43,8 +43,8 @@ Document structure
 Call the plugin function
 ```javascript
 $('main.main').screenScroll({
-    header: $(header.header),
-    footer: $(footer.footer)
+    header: $('header.header'),
+    footer: $('footer.footer')
 })
 ```
 ## Example
@@ -81,8 +81,8 @@ $('main.main').screenScroll({
 ## Options
 ```javascript
 $('main.main').screenScroll({
-    header: $(header.header), //header node
-    footer: $(footer.footer), //footer node
+    header: $('header.header'), //header node
+    footer: $('footer.footer'), //footer node
     headerFixed: true, // fixed header
     footerFixed: false, // fixed footer
     startScreen: 0, // start plugin position
