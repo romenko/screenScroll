@@ -20,13 +20,13 @@ Put the script at the bottom of your markup right after jQuery:
 ```html
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
-<script src="/node_modules/screenScroll/dist/jquery.min.js"></script>
+<script src="/node_modules/romenko.screenscroll/dist/screenScroll.min.js"></script>
 ```
 
 ```html
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
-<script src="/bower_components/screenScroll/dist/jquery.min.js"></script>
+<script src="/bower_components/romenko.screenscroll/dist/screenScroll.min.js"></script>
 ```
 
 Document structure
@@ -41,7 +41,7 @@ Document structure
 ```
 
 Call the plugin function
-```html
+```javascript
 $('main.main').screenScroll({
     header: $(header.header),
     footer: $(footer.footer)
@@ -49,7 +49,7 @@ $('main.main').screenScroll({
 ```
 ## Example
 [View demo](http://screenscroll.romenko.com.ua/)
-```html
+```javascript
 $('main.main').screenScroll({
     header: $('header.header'),
     footer: $('footer.footer'),
@@ -79,7 +79,7 @@ $('main.main').screenScroll({
 ```
 
 ## Options
-```html
+```javascript
 $('main.main').screenScroll({
     header: $(header.header), //header node
     footer: $(footer.footer), //footer node
@@ -91,7 +91,7 @@ $('main.main').screenScroll({
 })
 ```
 ## Events
-```html
+```javascript
     var screenScroll = $('main.main').screenScroll();
 
     //When the plugin gets resized.
