@@ -77,6 +77,16 @@ $('main.main').screenScroll({
     }
 });
 ```
+```html
+<a href="#" data-screenscroll="next">Scroll to next</a>
+<a href="#" data-screenscroll="prev">Scroll to prev</a>
+<a href="#" data-screenscroll-movetosection="1">Scroll to section 1</a>
+<a href="#" data-screenscroll-movetosection="example">Move to section with id "example"</a>
+<a href="#" data-screenscroll-gotosection="1">Goes to section 1 without animation</a>
+<a href="#" data-screenscroll-gotosection="example">Goes to section with id "example" without animation</a>
+<a href="#" data-screenscroll-moveto="2">Scroll to second screen</a>
+<a href="#" data-screenscroll-goto="2">Goes to second screen without animation</a>
+```
 
 ## Options
 ```javascript
