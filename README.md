@@ -9,11 +9,11 @@ This package can be installed with:
 ## Usage
 Put the required stylesheet at the top of your markup:
 ```html
-<link rel="stylesheet" href="/node_modules/screenScroll/dist/screenScroll.min.css" />
+<link rel="stylesheet" href="/node_modules/romenko.screenscroll/dist/screenScroll.min.css" />
 ```
 
 ```html
-<link rel="stylesheet" href="/bower_components/screenScroll/dist/screenScroll.min.css" />
+<link rel="stylesheet" href="/bower_components/romenko.screenscroll/dist/screenScroll.min.css" />
 ```
 
 Put the script at the bottom of your markup right after jQuery:
